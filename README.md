@@ -7,4 +7,4 @@ Implemented UART serial communication protocol with the following parameters:
 * Stop bits : 1
 
 # Brief overview
-![alt text](https://github.com/[avdssrk]/[UART_Virtex6]/blob/[images]/image.jpg?raw=true)
+![alt text](https://github.com/[avdssrk]/[UART_Virtex6]/blob/[images]/uart.png?raw=true)
