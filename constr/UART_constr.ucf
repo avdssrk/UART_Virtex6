@@ -1,0 +1,21 @@
+//user clock of 66MHz
+NET "clk" LOC = U23;
+
+// USB-UART bridge 
+NET "Rx" LOC = J24;   	  //RX data pin  
+NET "Tx" LOC= J25;   		//Tx data pin 
+
+// User LEDs
+NET "Rx_Data[0]" LOC =AC22;	//DS12
+NET "Rx_Data[1]" LOC =AC24;	//DS11
+NET "Rx_Data[2]" LOC =AE22;	//DS9
+NET "Rx_Data[3]" LOC =AE23;	//DS10
+NET "Rx_Data[4]" LOC =AB23;	//DS15
+NET "Rx_Data[5]" LOC =AG23;	//DS14
+NET "Rx_Data[6]" LOC =AE24;	//DS22
+NET "Rx_Data[7]" LOC =AD24;	//DS21
+
+// User push button
+ NET "rst" LOC = A18;  //SW6.2
+
+
