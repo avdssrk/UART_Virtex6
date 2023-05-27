@@ -21,8 +21,13 @@ Generally we need to sample the data, once per data bit. But if we sample it at 
 </p>
 
 
-If we are using 9600 buad rate and 16x method, then the required frequency of the output should be 9600x16= 153600 Hz. But in case of Virtex-6 ML605 board the available clock is 66MHz. So we use counter to generate the ticks. The mod of the counter is 66M/(9600x16) = 429.6875. Approximately we use Mod-430 counter. When the count==430(starting with count=1), the output of baud rate generator will be HIGH. In this way we generate the output of the baud rate generator, the clk for the Tx and Rx modules.
+If we are using 9600 buad rate and 16x method, then the required frequency of the output should be 9600x16= 153600 pulses per second. But in case of Virtex-6 ML605 board the available clock is 66MHz. So we use counter to generate the pulses. The mod of the counter is 66M/(9600x16) = 429.6875. Approximately we use Mod-430 counter. When the count==430(starting with count=1), the output of baud rate generator will be HIGH. In this way we generate the pulses which are applied to the Tx and Rx modules.
 
+<p align="center">
+  <img src="https://github.com/avdssrk/UART_Virtex6/blob/main/images/clk_gen.png" width="1150" title="baud_rate_input_clk">
+</p>
+
+**Note:** The output should not the square wave 'clock' waveform which is 16 times the baud rate. 
 
 # Transmitter 
 If we want to send a 8bit data 01101011 the signal will be as shown below.
