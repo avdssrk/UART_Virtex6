@@ -29,6 +29,11 @@ If we are using 9600 buad rate and 16x method, then the required frequency of th
 
 **Note:** The output should not the square wave 'clock' waveform which is 16 times the baud rate. 
 
+ 
+<p align="center">
+  <img src="https://github.com/avdssrk/UART_Virtex6/blob/main/images/baud_block.png" width="800" title="baud_rate_block_diagram">
+</p>
+
 # Transmitter 
 If we want to send a 8bit data 01101011 the signal will be as shown below.
 
