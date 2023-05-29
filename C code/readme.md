@@ -27,3 +27,22 @@ char bytes_to_send[5];
     bytes_to_send[4] = 5;
     
 ```
+
+## Serial txt
+With this code, we read the data from the .txt file and send it to FPGA. The input file is **mnist_1.txt**. One can change the file name to send the different file.
+```
+#define MAX_LINE_LENGTH 3138
+#define MAX_COLUMNS 785
+int main{
+    ...
+    FILE *file;
+    char line[MAX_LINE_LENGTH];
+    int data_txt[MAX_COLUMNS];
+    int numColumns;
+    
+    file = fopen("mnist_1.txt", "r");
+    ...
+}
+
+```
+Before running the code, one should take care of the size of the data in the txt file. In this code, the maximum length of the each line & the total number of elements in the txt file is predefined. It should be altered with different files.
