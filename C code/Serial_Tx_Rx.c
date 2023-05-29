@@ -2,6 +2,11 @@
 #include <windows.h>
 #include <stdio.h>
 #include <time.h>
+#include <string.h>
+
+#define MAX_LINE_LENGTH 3138
+#define MAX_COLUMNS 785
+
 
 void pauseS(unsigned int seconds){
     unsigned int msec = seconds*1000;
@@ -25,7 +30,29 @@ int main()
 
     // reading the data from the .txt file
 
+    FILE *file;
+    char line[MAX_LINE_LENGTH];
+    int data_txt[MAX_COLUMNS];
+    int numColumns;
 
+    file = fopen("mnist_1.txt", "r");
+    if (file == NULL) {
+        printf("Error opening the file.\n");
+        return 1;
+    }
+
+    while (fgets(line, sizeof(line), file) != NULL) {
+        numColumns = 0;
+        char *token = strtok(line, "\t"); // Split line by tab space
+
+        while (token != NULL && numColumns < MAX_COLUMNS) {
+            data_txt[numColumns] = atoi(token); // Convert token to integer
+            numColumns++;
+            token = strtok(NULL, "\t");
+        }
+    }
+
+    fclose(file);
 
 
 
@@ -84,8 +111,8 @@ int main()
     // Send specified text (remaining command line arguments)
     DWORD bytes_written, total_bytes_written = 0;
     fprintf(stderr, "Sending bytes...");
-    for(i=0;i<5;i++){
-        if(!WriteFile(hSerial, bytes_to_send+i, 1, &bytes_written, NULL))
+    for(i=0;i<numColumns;i++){
+        if(!WriteFile(hSerial, data_txt+i, 1, &bytes_written, NULL))
         {
             fprintf(stderr, "Error\n");
             CloseHandle(hSerial);
