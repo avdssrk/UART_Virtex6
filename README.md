@@ -17,7 +17,7 @@ The UART consisits of Transmitter to serially send the data over the line and a 
 Generally we need to sample the data, once per data bit. But if we sample it at the starting point, when the data is changing there is a chance of sampling the wrong data before it gets sampled. So we over sample the data. For this we need a clock which is higher than the required frequency. Thumb rule is to use clock 16 time more than the required baud rate. So we use baud rate generator to generate the ticks which is supplied to Tx and Rx.
 
 <p align="center">
-  <img src="https://github.com/avdssrk/UART_Virtex6/blob/main/images/baud_rate.png" width="1150" title="baud_rate_gen">
+  <img src="https://github.com/avdssrk/UART_Virtex6/blob/main/images/uart_baud.png" width="1150" title="baud_rate_gen">
 </p>
 
 
