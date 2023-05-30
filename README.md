@@ -45,7 +45,7 @@ If there is no data in the line, it will be HIGH value in the line. When there i
 To avoid the false sampling the sample the data at the middle of the data. So we sample at the 8th clock pulse generated from the baud rate generator. 
 
 <p align="center">
-  <img src="https://github.com/avdssrk/UART_Virtex6/blob/main/images/Rx.png" width="1150" title="Reciever">
+  <img src="https://github.com/avdssrk/UART_Virtex6/blob/main/images/uartx.png" width="1150" title="Reciever">
 </p>
 
 Based on this idea, we develop a state machine to sample the data the required points and not sample when there is no information(HIGH). 
