@@ -51,4 +51,14 @@ To avoid the false sampling the sample the data at the middle of the data. So we
 Based on this idea, we develop a state machine to sample the data the required points and not sample when there is no information(HIGH). 
 
 # Tools used
-To send the data serially from PC to FPGA through COM port, we used **Tera Term** tool. Initially we need to select the COM port. Make sure the parameters are same as you designed on FPGA. The parameters can be changed from the Options as shown below.
+To send the data serially from PC to FPGA through COM port, we used **Tera Term** tool. Initially we need to select the COM port.
+
+<p align="center">
+  <img src="https://github.com/avdssrk/UART_Virtex6/blob/main/images/tera1.png" width="1000" title="tera term 1">
+</p>
+
+Make sure the parameters are same as you designed on FPGA. The parameters can be changed from the Options as shown below.
+
+<p align="center">
+  <img src="https://github.com/avdssrk/UART_Virtex6/blob/main/images/tera2.png" width="1000" title="tera term 1">
+</p>
