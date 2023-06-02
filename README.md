@@ -60,5 +60,5 @@ To send the data serially from PC to FPGA through COM port, we used **Tera Term*
 Make sure the parameters are same as you designed on FPGA. The parameters can be changed from the Options as shown below.
 
 <p align="center">
-  <img src="https://github.com/avdssrk/UART_Virtex6/blob/main/images/tera2.png" width="1000" title="tera term 1">
+  <img src="https://github.com/avdssrk/UART_Virtex6/blob/main/images/tera2.png" width="800" title="tera term 1">
 </p>
