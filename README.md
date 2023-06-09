@@ -64,4 +64,4 @@ Make sure the parameters are same as you designed on FPGA. The parameters can be
 </p>
 
 
-**Note:** Without using any other tools, we can send data to FPGA using Tera Term MACROs only. You can find the link to the code [here.]{https://github.com/avdssrk/Image_to_BRAM_through_UART}
+**Note:** Without using any other tools, we can send data to FPGA using Tera Term MACROs only. You can find the link to the code [here.](https://github.com/avdssrk/Image_to_BRAM_through_UART)
